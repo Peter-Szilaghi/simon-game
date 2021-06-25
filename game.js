@@ -15,7 +15,7 @@ function randomNum() {
     $("h1").text( `Level ${ game.length }` );
 }
 
-$(document).keypress( ()=> { //PlayAgain
+$(document).click( ()=> { //PlayAgain
     if (!startGame) {
         randomNum();
         startGame = true;
@@ -39,7 +39,7 @@ $("[type = button]").click( function() {
         }
                 
     } else { //IF not match the colors, Restart pressing any key
-        $("h1").text("Game Over, Press Any Key to Restart");
+        $("h1").text("Game Over, Click/Tap to Restart");
         playSound("wrong");
         buttonAnimation("body", "red");
         ResetGame();
