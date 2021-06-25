@@ -15,8 +15,10 @@ function randomNum() {
     $("h1").text( `Level ${ game.length }` );
 }
 
-$(document).click( ()=> { //PlayAgain
-    if (!startGame) {
+$(document).click( (e) => { //PlayAgain  
+    if ( $( e.target ).attr( "type" ) === "button" ) { }
+
+    else if (!startGame) {
         randomNum();
         startGame = true;
     }
